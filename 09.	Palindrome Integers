@@ -1,0 +1,43 @@
+using System;
+
+namespace Palindrome_Integers
+{
+	class Program
+	{
+
+		static void palindromeIntegers (string imput)
+		{
+			string palindrome = "";
+			for (int i = imput.Length - 1; i >= 0; i--)
+			{
+				palindrome += imput[i];
+			}
+
+			if (palindrome.Equals(imput))
+			{
+				Console.WriteLine("true");
+			}
+			else
+			{
+				Console.WriteLine("false");
+			}
+		}
+
+		static void Main(string[] args)
+		{
+			
+
+			while (true)
+			{
+				string imput = Console.ReadLine();
+
+				if (imput.Equals("END"))
+				{
+					break;
+				}
+
+				palindromeIntegers(imput);
+			}
+		}
+	}
+}
