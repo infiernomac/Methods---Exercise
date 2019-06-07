@@ -1,0 +1,34 @@
+using System;
+
+namespace Add_and_Subtract
+{
+	class Program
+	{
+
+		static int Sum(int firstNumber, int secondNumber)
+		{
+			int sum = firstNumber + secondNumber;
+
+			return sum;
+		}
+
+		static void Subtract(int sum, int threeNumber)
+		{
+			int subtrack = sum - threeNumber;
+
+			Console.WriteLine(subtrack);
+		}
+
+		static void Main(string[] args)
+		{
+			int firstNumber = int.Parse(Console.ReadLine());
+			int secondNumber = int.Parse(Console.ReadLine());
+			int threeNumber = int.Parse(Console.ReadLine());
+
+			int sum = Sum(firstNumber, secondNumber);
+
+			Subtract(sum, threeNumber);
+
+		}
+	}
+}
