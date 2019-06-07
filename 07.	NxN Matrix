@@ -1,0 +1,38 @@
+using System;
+
+namespace NxN_Matrix
+{
+	class Program
+	{
+
+		static void Matrix(int number)
+		{
+			int[,] array = new int[number, number];
+
+			for (int i = 0; i < array.GetLength(0); i++)
+			{
+				for (int j = 0; j < array.GetLength(1); j++)
+				{
+					array[i, j] = number;
+				}
+            }
+
+			for (int i = 0; i < array.GetLength(0); i++)
+			{
+				for (int j = 0; j < array.GetLength(1); j++)
+				{
+					Console.Write(array[i, j] + " ");
+				}
+				Console.WriteLine();
+			}
+		}
+
+		static void Main(string[] args)
+		{
+			int number = int.Parse(Console.ReadLine());
+
+			Matrix(number);
+
+		}
+	}
+}
