@@ -1,0 +1,33 @@
+using System;
+
+namespace Middle_Characters
+{
+	class Program
+	{
+
+		static void MiddleCharacters(string imput)
+		{
+			int imputLength = imput.Length;
+
+			int firstChar = imputLength / 2;
+			int secondChar = firstChar + 1;
+
+			if ((imputLength % 2).Equals(0))
+			{
+				Console.Write(imput[firstChar - 1]);
+				Console.WriteLine(imput[secondChar - 1]);
+			}
+			else
+			{
+				Console.WriteLine(imput[secondChar - 1]);
+			}
+		}
+
+		static void Main(string[] args)
+		{
+			string imput = Console.ReadLine();
+
+			MiddleCharacters(imput);
+		}
+	}
+}
