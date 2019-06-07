@@ -1,0 +1,59 @@
+using System;
+
+namespace Top_Number
+{
+	class Program
+	{
+
+		static void oneOddDigit(int i)
+		{
+			string check = "";
+
+			check = i.ToString();
+
+			for (int a = 0; a < check.Length; a++)
+			{
+
+				int number = Convert.ToInt32(check[a]);
+
+				if ((number % 2).Equals(1))
+				{
+					Console.WriteLine(i);
+					break;
+				}
+			}
+		}
+
+		static void sumDigitsIsDivisibleBy8(int number)
+		{
+
+			string check = "";
+
+			
+
+			for (int i = 17; i < number; i++)
+			{
+				check = i.ToString();
+
+				int sum = 0;
+
+				for (int a = 0; a < check.Length; a++)
+				{
+					sum += Convert.ToInt32(check[a]);
+				}
+
+				if ((sum % 8).Equals(0))
+				{
+					oneOddDigit(i);
+				}
+			}
+		}
+
+		static void Main(string[] args)
+		{
+			int number = int.Parse(Console.ReadLine());
+
+			sumDigitsIsDivisibleBy8(number);
+		}
+	}
+}
